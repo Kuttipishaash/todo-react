@@ -9,7 +9,7 @@ export default class AddTodo extends Component {
         return (
             <div>
                 <h3>Input Field and Button to be Implemented</h3>
-                <p><b>Note: </b>The list is hardcoded</p>
+                <p><b>Note: </b>The list displayed is hardcoded</p>
             </div>
         );
     }
