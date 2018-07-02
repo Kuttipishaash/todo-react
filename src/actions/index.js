@@ -1,8 +1,7 @@
 import {todosRef} from '../config/firebase';
 import {FETCH_TODOS} from "./types";
 
-
-//TODO: Change the function definition
+/*
 export function fetchPosts() {
     db.collection("todos").get().then((querySnapshot) => {
         
@@ -11,3 +10,21 @@ export function fetchPosts() {
         });
     });
 }
+*/
+
+export const addTodo = newTodo => async dispatch => {
+    todosRef.push().set(newTodo);
+};
+
+export const removeTodo = completedTodo => async dispatch =>{
+    todosRef.child(completedTodo).remove();
+};
+
+export const fetchTodos = () => async dispatch => {
+    todosRef.on('value', snapshot => {
+        dispatch({
+            type: FETCH_TODOS,
+            payload: snapshot.val()
+        });
+    });
+};

@@ -1,4 +1,4 @@
-import {FETCH_TODOS} from "../actions";
+import {FETCH_TODOS} from "../actions/types";
 
 const INITIAL_STATE = {all:[]};
 
