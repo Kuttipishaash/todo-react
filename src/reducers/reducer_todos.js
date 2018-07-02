@@ -1,4 +1,6 @@
-import firebase from "firebase";
+import {FETCH_TODOS} from "../actions";
+
+const INITIAL_STATE = {all:[]};
 
 var databaseSample = {
     "todos": [{
@@ -11,6 +13,12 @@ var databaseSample = {
         "status": 0
     }]
 };
-export default function () {
-    return databaseSample.todos;
+
+export default (state = INITIAL_STATE, action) =>{
+    switch (action.type){
+        case FETCH_TODOS:
+            return {...state, all: action.payload.data};
+        default:
+            return state;
+    }
 }
