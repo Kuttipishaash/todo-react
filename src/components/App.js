@@ -6,7 +6,7 @@ import TodoList from '../containers/TodoList';
 class App extends Component {
     render() {
         return (
-            <div>
+            <div className="container-fluid">
                 <AddTodo/>
                 <TodoList/>
             </div>
