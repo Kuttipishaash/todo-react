@@ -35,9 +35,9 @@ class TodoList extends Component {
         return (
             this.props.todos.map((todo) => {
                 return (
-                    <li key={todo.id} className="list-group-item">
+                    <li key={todo.id}>
                         {todo.content}
-                        <span className="btn btn-danger">X</span>
+                        <span>X</span>
                     </li>
                 );
             })
@@ -45,7 +45,7 @@ class TodoList extends Component {
     }
     render() {
         return (
-            <ul className="list-group col-sm-4">
+            <ul>
                 {this.renderList()}
             </ul>
         );
