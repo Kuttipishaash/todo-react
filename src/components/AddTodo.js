@@ -1,8 +1,9 @@
 import React from 'react';
 import { Component } from 'react';
 import {addTodo} from "../actions";
+import {connect} from "react-redux";
 
-export default class AddTodo extends Component {
+class AddTodo extends Component {
     state = {
         addFormValue: ""
     };
@@ -15,7 +16,7 @@ export default class AddTodo extends Component {
         const {addFormValue}= this.state;
         const {addTodo} = this.props;
         event.preventDefault();
-        addTodo({title: addFormValue});
+        addTodo({content: addFormValue});
         this.setState({addFormValue: ""});
     };
 
@@ -38,3 +39,9 @@ export default class AddTodo extends Component {
         );
     }
 }
+const mapStateToProps = ({ data }) => {
+    return {
+        data
+    };
+};
+export default connect(mapStateToProps, addTodo)(AddTodo);
