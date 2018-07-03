@@ -1,6 +1,6 @@
 import {FETCH_TODOS} from "../actions/types";
 
-const INITIAL_STATE = {all:[]};
+const INITIAL_STATE = {};
 
 var databaseSample = {
     "todos": [{
@@ -17,7 +17,7 @@ var databaseSample = {
 export default (state = INITIAL_STATE, action) =>{
     switch (action.type){
         case FETCH_TODOS:
-            return {...state, all: action.payload.data};
+            return action.payload;
         default:
             return state;
     }

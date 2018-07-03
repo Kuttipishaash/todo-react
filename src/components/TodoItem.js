@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import {connect} from 'react-redux';
-import '../../style/styles.css';
 import {removeTodo} from "../actions";
 
 class TodoItem extends Component {
