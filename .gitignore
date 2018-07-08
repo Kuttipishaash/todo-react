@@ -9,6 +9,9 @@
 # production
 /build
 
+#WebStorm
+/\.idea
+
 # misc
 .DS_Store
 .env.local
