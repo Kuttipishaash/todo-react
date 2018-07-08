@@ -13,9 +13,9 @@ class AddTodo extends Component {
     };
 
     handleFormSubmit = event =>{
+        event.preventDefault();
         const {addFormValue}= this.state;
         const {addTodo} = this.props;
-        event.preventDefault();
         addTodo({content: addFormValue});
         this.setState({addFormValue: ""});
     };
@@ -23,14 +23,14 @@ class AddTodo extends Component {
     render() {
         const {addFormValue} = this.state;
         return (
-            <form onSubmit={this.handleFormSubmit}>
+            <form onSubmit={this.handleFormSubmit.bind(this)}>
             <div className="input-group mb-3">
                     <input
                         className="form-control"
                         type="text"
                         placeholder="Enter todo"
                         value={addFormValue}
-                        onChange={this.handleInputChange}/>
+                        onChange={this.handleInputChange.bind(this)}/>
                 <div className="input-group-append">
                     <button className="btn btn-primary" type="submit">Add</button>
                 </div>

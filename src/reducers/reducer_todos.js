@@ -1,6 +1,8 @@
 import {FETCH_TODOS} from "../actions/types";
 
-const INITIAL_STATE = {};
+const INITIAL_STATE = {
+    todos: []
+};
 
 var databaseSample = {
     "todos": [{
