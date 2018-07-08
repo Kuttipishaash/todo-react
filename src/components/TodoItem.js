@@ -19,7 +19,7 @@ class TodoItem extends Component {
                 <h4>
                     {todo.content}
                     <span
-                        onClick={()=>{ this.markAsCompleted((todoId))}}
+                        onClick={ this.markAsCompleted((todoId)).bind(this)}
                     >Mark as completed</span>
                 </h4>
             </div>

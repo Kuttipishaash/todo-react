@@ -33,10 +33,10 @@ class TodoList extends Component {
     }
 }
 
-const mapStateToProps = ({data}) => {
+const mapStateToProps = (state) => {
     // Whatever is returned from here will show up as props inside TodoList
     return {
-        data
+        data: state.todos
     };
 };
 
