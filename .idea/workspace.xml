@@ -41,8 +41,8 @@
       <file leaf-file-name="TodoItem.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/components/TodoItem.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="475">
-              <caret line="34" column="134" selection-start-line="34" selection-start-column="134" selection-end-line="34" selection-end-column="134" />
+            <state relative-caret-position="200">
+              <caret line="26" column="55" lean-forward="true" selection-start-line="26" selection-start-column="55" selection-end-line="26" selection-end-column="55" />
               <folding>
                 <element signature="e#0#41#0" expanded="true" />
               </folding>
@@ -274,7 +274,7 @@
       <workItem from="1531037496168" duration="3792000" />
       <workItem from="1531052421618" duration="2014000" />
       <workItem from="1531143696047" duration="9202000" />
-      <workItem from="1531161883613" duration="602000" />
+      <workItem from="1531161883613" duration="856000" />
     </task>
     <task id="LOCAL-00001" summary="Todo project targets completed">
       <created>1531152271813</created>
@@ -301,11 +301,10 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="32701000" />
+    <option name="totallyTimeSpent" value="32955000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.11011591" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -687,8 +686,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/TodoItem.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="475">
-          <caret line="34" column="134" selection-start-line="34" selection-start-column="134" selection-end-line="34" selection-end-column="134" />
+        <state relative-caret-position="200">
+          <caret line="26" column="55" lean-forward="true" selection-start-line="26" selection-start-column="55" selection-end-line="26" selection-end-column="55" />
           <folding>
             <element signature="e#0#41#0" expanded="true" />
           </folding>

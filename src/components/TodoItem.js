@@ -8,7 +8,8 @@ class TodoItem extends Component {
         this.props.removeTodo(this.props.todoId)
     }
     markItemAsCompleted(){
-        this.props.completeTodo(this.props.todoId)
+        let newStatus = !this.props.todo.status;
+        this.props.completeTodo(this.props.todoId, newStatus)
     }
 
     render() {
