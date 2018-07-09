@@ -17,7 +17,7 @@ class TodoItem extends Component {
                     {todo.content}
                     <div className="float-right">
                         <span className="btn btn-success" onClick={this.deleteItem.bind(this)}>Mark as completed</span>
-                        <span className="btn btn-danger" onClick={this.deleteItem.bind(this)}>Delete</span>
+                        <span className="btn btn-danger ml-2" onClick={this.deleteItem.bind(this)}>Delete</span>
                     </div>
                 </h4>
             </li>
