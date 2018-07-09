@@ -31,8 +31,6 @@ class TodoList extends Component {
     }
 
     render() {
-        console.log(this.props.todos.todos);
-
         return (
             <div>
                 <ul className="list-group">

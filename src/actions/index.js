@@ -11,6 +11,12 @@ export const removeTodo = todoId => dispatch =>{
     todosRef.child(todoId).remove();
 };
 
+// TODO: To implement
+export const completeTodo = todoId => dispatch =>{
+    console.log('completeTodo');
+    todosRef.child(todoId).child('status').set(true);
+};
+
 export const fetchTodos = () => dispatch => {
     todosRef.on('value', snapshot => {
         console.log(snapshot.val());

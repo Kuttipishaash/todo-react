@@ -16,7 +16,7 @@ class AddTodo extends Component {
         event.preventDefault();
         const {addFormValue}= this.state;
         const {addTodo} = this.props;
-        addTodo({content: addFormValue});
+        addTodo({content: addFormValue, status: false});
         this.setState({addFormValue: ""});
     };
 
