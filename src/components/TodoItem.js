@@ -15,7 +15,10 @@ class TodoItem extends Component {
             <li key={todoId} className="list-group-item">
                 <h4>
                     {todo.content}
-                    <span className="btn btn-danger" onClick={this.deleteItem.bind(this)}>Mark as completed</span>
+                    <div className="float-right">
+                        <span className="btn btn-success" onClick={this.deleteItem.bind(this)}>Mark as completed</span>
+                        <span className="btn btn-danger" onClick={this.deleteItem.bind(this)}>Delete</span>
+                    </div>
                 </h4>
             </li>
         )
