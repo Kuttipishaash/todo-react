@@ -3,26 +3,21 @@ import {connect} from 'react-redux';
 import {removeTodo} from "../actions";
 
 class TodoItem extends Component {
-    constructor(props) {
-        super(props)
+
+    deleteItem(){
+        this.props.removeTodo(this.props.todoId)
     }
 
-    markAsCompleted = completedTodoId => {
-        const {removeTodo} = this.props;
-        removeTodo(completedTodoId);
-    };
-    
     render() {
         const {todoId, todo} = this.props;
+        console.log(`todoId : ${todoId}`);
         return (
-            <div key={todoId} className="todo-item">
+            <li key={todoId} className="list-group-item">
                 <h4>
                     {todo.content}
-                    <span
-                        onClick={ this.markAsCompleted((todoId)).bind(this)}
-                    >Mark as completed</span>
+                    <span className="btn btn-danger" onClick={this.deleteItem.bind(this)}>Mark as completed</span>
                 </h4>
-            </div>
+            </li>
         )
     }
 }

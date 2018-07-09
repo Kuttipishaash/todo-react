@@ -21,7 +21,6 @@ class AddTodo extends Component {
     };
 
     render() {
-        const {addFormValue} = this.state;
         return (
             <form onSubmit={this.handleFormSubmit.bind(this)}>
             <div className="input-group mb-3">
@@ -29,7 +28,7 @@ class AddTodo extends Component {
                         className="form-control"
                         type="text"
                         placeholder="Enter todo"
-                        value={addFormValue}
+                        value={this.state.addFormValue}
                         onChange={this.handleInputChange.bind(this)}/>
                 <div className="input-group-append">
                     <button className="btn btn-primary" type="submit">Add</button>
@@ -39,9 +38,9 @@ class AddTodo extends Component {
         );
     }
 }
-const mapStateToProps = ({ data }) => {
-    return {
-        data
-    };
-};
-export default connect(mapStateToProps, addTodo)(AddTodo);
+// const mapStateToProps = ({ data }) => {
+//     return {
+//         data
+//     };
+// };
+export default connect(null, {addTodo})(AddTodo);

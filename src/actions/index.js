@@ -1,15 +1,17 @@
 import {todosRef} from '../config/firebase';
 import {FETCH_TODOS} from "./types";
 
-export const addTodo = newTodo => async dispatch => {
+// Using async keyword in the step below to perform the operation in a async fashion.
+export const addTodo = newTodo => dispatch => {
     todosRef.push().set(newTodo);
 };
 
-export const removeTodo = completedTodo => async dispatch =>{
-    todosRef.child(completedTodo).remove();
+export const removeTodo = todoId => dispatch =>{
+    console.log('removeTodo');
+    todosRef.child(todoId).remove();
 };
 
-export const fetchTodos = () => async dispatch => {
+export const fetchTodos = () => dispatch => {
     todosRef.on('value', snapshot => {
         console.log(snapshot.val());
         dispatch({
